@@ -1,0 +1,9 @@
+﻿@model PizzaBox.Domain.Models.Pizza
+<body>
+    @Model.Crust.Name
+    @Model.Size.Name
+    @foreach (var topping in Model.Toppings) 
+    {
+        @topping.Name
+    }
+</body>

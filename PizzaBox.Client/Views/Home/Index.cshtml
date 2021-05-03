@@ -1,0 +1,79 @@
+﻿@model PizzaBox.Client.Models.OrderMVC
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PizzaBox</title>
+</head>
+
+<body>
+    <form action="/order" method="post">
+        @Html.AntiForgeryToken()
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-4 row rounded box">
+                    <div class=" col-md-6">
+                        <img src="https://via.placeholder.com/100" />
+                    </div>
+                    <div class=" col-md-6">
+                        <h1>Crust</h1>
+
+                        @foreach (var item in Model.Crusts)
+                        {
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="@item.Name" asp-for="SelectedCrust" value="@item.Name" />
+                                <label class="form-check-label" for="@item.Name">@item.Name</label>
+                            </div>
+                        }
+                    @Html.ValidationMessageFor(m => m.SelectedCrust,null, new { @class = "text-danger" })
+
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4  row box">
+                    <div class=" col-md-6">
+                        <img src="https://via.placeholder.com/100" />
+                    </div>
+                    <div class=" col-md-6">
+                        <h1>Size</h1>
+
+                        @foreach (var item in Model.Sizes)
+                        {
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="@item.Name" asp-for="SelectedSize" value="@item.Name" />
+                                <label class="form-check-label" for="@item.Name">@item.Name</label>
+                            </div>
+                        }
+                        @Html.ValidationMessageFor(m => m.SelectedSize,null, new { @class = "text-danger" })
+
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 row box">
+                    <div class=" col-md-6">
+                        <img src="https://via.placeholder.com/100" />
+                    </div>
+                    <div class=" col-md-6">
+                        <h1>Topping</h1>
+
+                        @foreach (var item in Model.Toppings)
+                        {
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="@item.Name" name="SelectedToppings" value="@item.Name" />
+                                <label class="form-check-label" for="@item.Name">@item.Name</label>
+                            </div>
+                        }
+                        @Html.ValidationMessageFor(m => m.SelectedToppings, null, new { @class = "text-danger" })
+
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

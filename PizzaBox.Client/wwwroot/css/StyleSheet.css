@@ -1,0 +1,17 @@
+﻿.margin
+{
+    margin: 30px;
+}
+
+.box 
+{
+    padding: 5px;
+}
+.customheight 
+{
+    height:20%;
+}
+.center {
+    margin-left: 40%;
+    margin-right: 60%;
+}
