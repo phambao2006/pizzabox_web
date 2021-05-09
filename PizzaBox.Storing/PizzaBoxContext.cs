@@ -5,6 +5,8 @@ namespace PizzaBox.Storing
 {
     public class PizzaBoxContext : DbContext
     {
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Store> Stores { get; set; }
         public DbSet<Pizza> Pizzas { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Crust> Crusts { get; set; }
@@ -17,6 +19,10 @@ namespace PizzaBox.Storing
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Pizza>().HasKey(e => e.EntityID);
+
+            builder.Entity<Store>().HasKey(e => e.EntityID);
+
+            builder.Entity<Customer>().HasKey(e => e.EntityID);
 
             builder.Entity<Order>().HasKey(e => e.EntityID);
 
@@ -43,20 +49,26 @@ namespace PizzaBox.Storing
                 new Crust {EntityID=3,Name="Stuffed Crust",Price = 2}
             });
             builder.Entity<Size>().HasData(new[]
-{
+      {
                 new Size {EntityID=1,Name="Small",Price = 2},
                 new Size {EntityID=2,Name="Medium",Price = 3},
                 new Size {EntityID=3,Name="Large",Price = 4}
             });
 
             builder.Entity<Topping>().HasData(new[]
-{
+      {
                 new Topping {EntityID=1,Name="Chicken",Price = 2},
                 new Topping {EntityID=2,Name="Beef",Price = 2},
                 new Topping {EntityID=3,Name="Pork",Price = 2},
                 new Topping {EntityID=4,Name="Pineapple",Price = 2},
                 new Topping {EntityID=5,Name="Bell Pepper",Price = 2},
                 new Topping {EntityID=6,Name="Mushroom",Price = 2}
+            });
+            builder.Entity<Store>().HasData(new[]
+            {
+                new Store {EntityID=1,Name="DownTown"},
+                new Store {EntityID=2,Name="Times Square"},
+                new Store {EntityID=3,Name="Central"}
             });
         }
     }

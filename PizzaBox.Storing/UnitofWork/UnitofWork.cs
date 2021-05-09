@@ -8,6 +8,7 @@ namespace PizzaBox.Storing.UnitofWork
         public CrustRepository Crusts { get; }
         public SizeRepository Sizes { get; }
         public ToppingsRepository Toppings { get; }
+        public StoreRepository Stores { get; }
 
         public UnitofWork(PizzaBoxContext context)
         {
@@ -15,6 +16,7 @@ namespace PizzaBox.Storing.UnitofWork
             Crusts = new CrustRepository(_context);
             Sizes = new SizeRepository(_context);
             Toppings = new ToppingsRepository(_context);
+            Stores = new StoreRepository(_context);
         }
 
     }

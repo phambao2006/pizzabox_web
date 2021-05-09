@@ -1,0 +1,3 @@
+start postgres in docker:
+
+docker container run -it --rm -d --name pizzabox -p 5432:5432 -e POSTGRES_PASSWORK=postgres postgres

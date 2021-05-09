@@ -6294,35 +6294,42 @@
     ]
   },
   "packageFolders": {
-    "/home/phambao/.nuget/packages/": {}
+    "C:\\Users\\Bao\\.nuget\\packages\\": {},
+    "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Testing/PizzaBox.Testing.csproj",
+      "projectUniqueName": "C:\\Users\\Bao\\revature\\pizzabox_web\\PizzaBox.Testing\\PizzaBox.Testing.csproj",
       "projectName": "PizzaBox.Testing",
-      "projectPath": "/mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Testing/PizzaBox.Testing.csproj",
-      "packagesPath": "/home/phambao/.nuget/packages/",
-      "outputPath": "/mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Testing/obj/",
+      "projectPath": "C:\\Users\\Bao\\revature\\pizzabox_web\\PizzaBox.Testing\\PizzaBox.Testing.csproj",
+      "packagesPath": "C:\\Users\\Bao\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Bao\\revature\\pizzabox_web\\PizzaBox.Testing\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/phambao/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Bao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Domain/PizzaBox.Domain.csproj": {
-              "projectPath": "/mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Domain/PizzaBox.Domain.csproj"
+            "C:\\Users\\Bao\\revature\\pizzabox_web\\PizzaBox.Domain\\PizzaBox.Domain.csproj": {
+              "projectPath": "C:\\Users\\Bao\\revature\\pizzabox_web\\PizzaBox.Domain\\PizzaBox.Domain.csproj"
             },
-            "/mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Storing/PizzaBox.Storing.csproj": {
-              "projectPath": "/mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Storing/PizzaBox.Storing.csproj"
+            "C:\\Users\\Bao\\revature\\pizzabox_web\\PizzaBox.Storing\\PizzaBox.Storing.csproj": {
+              "projectPath": "C:\\Users\\Bao\\revature\\pizzabox_web\\PizzaBox.Storing\\PizzaBox.Storing.csproj"
             }
           }
         }
@@ -6377,7 +6384,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

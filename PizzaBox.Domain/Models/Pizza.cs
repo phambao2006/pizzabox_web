@@ -8,9 +8,22 @@ namespace PizzaBox.Domain.Models
         public Crust Crust { get; set; }
         public Size Size { get; set; }
         public List<Topping> Toppings { get; set; } = new List<Topping>();
+        public decimal Price { get; set; }
         public long OrderEntityId { get; set; }
         public long SizeEntityId { get; set; }
         public long CrustEntityId { get; set; }
 
+        public decimal PizzaPrice()
+        {
+            decimal pizzaprice = 4;
+            foreach (var topping in Toppings)
+            {
+                pizzaprice = pizzaprice + topping.Price;
+            }
+
+            pizzaprice = pizzaprice + Crust.Price + Size.Price;
+
+            return decimal.Round(pizzaprice, 2);
+        }
     }
 }

@@ -34,6 +34,10 @@ namespace PizzaBox.Client.Controllers
 
                 var neworder = new Order();
 
+                neworder.Customer = new Customer { Name = order.CustomerName };
+
+                neworder.Store = _unitofwork.Stores.Select(s => s.Name == order.SelectedStore).FirstOrDefault();
+
                 neworder.Pizzas.Add(pizza);
 
                 _context.Orders.Add(neworder);

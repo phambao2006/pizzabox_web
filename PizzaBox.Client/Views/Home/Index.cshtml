@@ -14,56 +14,76 @@
         @Html.AntiForgeryToken()
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-6 col-md-4 row rounded box">
-                    <div class=" col-md-6">
+                <div class="col-12 col-sm-6 col-md-3 row box">
+                    <div class="col-6 box">
+                        <label for="CustomerName">Name:</label>
+                        <input type="text" class="form-control" id="CustomerName" asp-for="CustomerName" placeholder="Name">
+                        @Html.ValidationMessageFor(m => m.CustomerName, null, new { @class = "text-danger" })
+                    </div>
+                    <div class="col-6 box">
+                        <h1>Store</h1>
+
+                        @foreach (var item in Model.Stores)
+                        {
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="@item.Name" asp-for="SelectedStore"
+                                       value="@item.Name" />
+                                <label class="form-check-label" for="@item.Name">@item.Name</label>
+                            </div>
+                        }
+                        @Html.ValidationMessageFor(m => m.SelectedStore, null, new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 row box">
+                    <div class=" col-md-6 box">
                         <img src="https://via.placeholder.com/100" />
                     </div>
-                    <div class=" col-md-6">
+                    <div class=" col-md-6 box">
                         <h1>Crust</h1>
 
                         @foreach (var item in Model.Crusts)
                         {
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" id="@item.Name" asp-for="SelectedCrust"
-                                value="@item.Name" />
+                                       value="@item.Name" />
                                 <label class="form-check-label" for="@item.Name">@item.Name</label>
                             </div>
                         }
-                        @Html.ValidationMessageFor(m => m.SelectedCrust,null, new { @class = "text-danger" })
+                        @Html.ValidationMessageFor(m => m.SelectedCrust, null, new { @class = "text-danger" })
 
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4  row box">
-                    <div class=" col-md-6">
+                <div class="col-12 col-sm-6 col-md-3  row box">
+                    <div class=" col-md-6 box">
                         <img src="https://via.placeholder.com/100" />
                     </div>
-                    <div class=" col-md-6">
+                    <div class=" col-md-6 box">
                         <h1>Size</h1>
 
                         @foreach (var item in Model.Sizes)
                         {
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" id="@item.Name" asp-for="SelectedSize"
-                                value="@item.Name" />
+                                       value="@item.Name" />
                                 <label class="form-check-label" for="@item.Name">@item.Name</label>
                             </div>
                         }
-                        @Html.ValidationMessageFor(m => m.SelectedSize,null, new { @class = "text-danger" })
+                        @Html.ValidationMessageFor(m => m.SelectedSize, null, new { @class = "text-danger" })
 
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 row box">
-                    <div class=" col-md-6">
+                <div class="col-12 col-sm-6 col-md-3 row box">
+                    <div class=" col-md-6 box">
                         <img src="https://via.placeholder.com/100" />
                     </div>
-                    <div class=" col-md-6">
+                    <div class=" col-md-6 box">
                         <h1>Topping</h1>
 
                         @foreach (var item in Model.Toppings)
                         {
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="@item.Name" name="SelectedToppings"
-                                value="@item.Name" />
+                                       value="@item.Name" />
                                 <label class="form-check-label" for="@item.Name">@item.Name</label>
                             </div>
                         }

@@ -21,3 +21,4 @@ C:\Users\Bao\revature\pizzabox_web\PizzaBox.Domain\obj\Debug\net5.0\PizzaBox.Dom
 C:\Users\Bao\revature\pizzabox_web\PizzaBox.Domain\obj\Debug\net5.0\PizzaBox.Domain.dll
 C:\Users\Bao\revature\pizzabox_web\PizzaBox.Domain\obj\Debug\net5.0\ref\PizzaBox.Domain.dll
 C:\Users\Bao\revature\pizzabox_web\PizzaBox.Domain\obj\Debug\net5.0\PizzaBox.Domain.pdb
+C:\Users\Bao\revature\pizzabox_web\PizzaBox.Domain\obj\Debug\net5.0\PizzaBox.Domain.csprojAssemblyReference.cache

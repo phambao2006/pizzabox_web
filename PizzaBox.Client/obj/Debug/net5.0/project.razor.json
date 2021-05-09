@@ -15619,6 +15619,11 @@
   "RootNamespace": "PizzaBox.Client",
   "Documents": [
     {
+      "FilePath": "/mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Client/Views/Order/Order.cshtml",
+      "TargetPath": "Views\\Order\\Order.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Client/Views/Shared/_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
