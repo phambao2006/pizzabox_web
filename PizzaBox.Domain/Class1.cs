@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PizzaBox.Domain
+﻿namespace PizzaBox.Domain
 {
     public class Class1
     {

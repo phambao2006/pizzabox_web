@@ -3,8 +3,6 @@ using PizzaBox.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PizzaBox.Storing.Repositories
 {
@@ -12,7 +10,7 @@ namespace PizzaBox.Storing.Repositories
     {
         private readonly PizzaBoxContext _context;
 
-        public CrustRepository(PizzaBoxContext context) 
+        public CrustRepository(PizzaBoxContext context)
         {
             _context = context;
         }

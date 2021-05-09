@@ -3,15 +3,13 @@ using PizzaBox.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PizzaBox.Storing.Repositories
 {
     public class ToppingsRepository : IRepository<Topping>
     {
         private readonly PizzaBoxContext _context;
-        public ToppingsRepository (PizzaBoxContext context)
+        public ToppingsRepository(PizzaBoxContext context)
         {
             _context = context;
         }

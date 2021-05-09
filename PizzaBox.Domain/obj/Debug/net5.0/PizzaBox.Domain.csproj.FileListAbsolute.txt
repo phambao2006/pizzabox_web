@@ -10,15 +10,3 @@
 /mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Domain/obj/Debug/net5.0/PizzaBox.Domain.dll
 /mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Domain/obj/Debug/net5.0/ref/PizzaBox.Domain.dll
 /mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Domain/obj/Debug/net5.0/PizzaBox.Domain.pdb
-C:\Users\Bao\revature\pizzabox_web\PizzaBox.Domain\bin\Debug\net5.0\PizzaBox.Domain.deps.json
-C:\Users\Bao\revature\pizzabox_web\PizzaBox.Domain\bin\Debug\net5.0\PizzaBox.Domain.dll
-C:\Users\Bao\revature\pizzabox_web\PizzaBox.Domain\bin\Debug\net5.0\ref\PizzaBox.Domain.dll
-C:\Users\Bao\revature\pizzabox_web\PizzaBox.Domain\bin\Debug\net5.0\PizzaBox.Domain.pdb
-C:\Users\Bao\revature\pizzabox_web\PizzaBox.Domain\obj\Debug\net5.0\PizzaBox.Domain.csprojAssemblyReference.cache
-C:\Users\Bao\revature\pizzabox_web\PizzaBox.Domain\obj\Debug\net5.0\PizzaBox.Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Bao\revature\pizzabox_web\PizzaBox.Domain\obj\Debug\net5.0\PizzaBox.Domain.AssemblyInfoInputs.cache
-C:\Users\Bao\revature\pizzabox_web\PizzaBox.Domain\obj\Debug\net5.0\PizzaBox.Domain.AssemblyInfo.cs
-C:\Users\Bao\revature\pizzabox_web\PizzaBox.Domain\obj\Debug\net5.0\PizzaBox.Domain.csproj.CoreCompileInputs.cache
-C:\Users\Bao\revature\pizzabox_web\PizzaBox.Domain\obj\Debug\net5.0\PizzaBox.Domain.dll
-C:\Users\Bao\revature\pizzabox_web\PizzaBox.Domain\obj\Debug\net5.0\ref\PizzaBox.Domain.dll
-C:\Users\Bao\revature\pizzabox_web\PizzaBox.Domain\obj\Debug\net5.0\PizzaBox.Domain.pdb

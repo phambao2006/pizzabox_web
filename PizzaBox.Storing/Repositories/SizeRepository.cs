@@ -1,17 +1,15 @@
-﻿using System;
+﻿using PizzaBox.Domain.interfaces;
+using PizzaBox.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PizzaBox.Domain.interfaces;
-using PizzaBox.Domain.Models;
 
 namespace PizzaBox.Storing.Repositories
 {
     public class SizeRepository : IRepository<Size>
     {
         private readonly PizzaBoxContext _context;
-        public SizeRepository(PizzaBoxContext context) 
+        public SizeRepository(PizzaBoxContext context)
         {
             _context = context;
         }

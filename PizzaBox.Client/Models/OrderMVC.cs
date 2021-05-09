@@ -15,9 +15,9 @@ namespace PizzaBox.Client.Models
         public List<Topping> Toppings { get; set; }
         [Required(ErrorMessage = "Please Select Crust")]
         public string SelectedCrust { get; set; }
-        [Required(ErrorMessage ="Please Select Size")]
+        [Required(ErrorMessage = "Please Select Size")]
         public string SelectedSize { get; set; }
-        [Required(ErrorMessage ="Please Select Toppings")]
+        [Required(ErrorMessage = "Please Select Toppings")]
         public List<string> SelectedToppings { get; set; }
         public void Load(UnitofWork unitofwork)
         {
@@ -31,7 +31,7 @@ namespace PizzaBox.Client.Models
             var result = new List<ValidationResult>();
             if (SelectedToppings.Count < 2 || SelectedToppings.Count > 5)
             {
-                result.Add(new ValidationResult("Pizza Need At Least 2 Or At Most 5 Toppings", new[] { "SelectedToppings" })) ;
+                result.Add(new ValidationResult("Pizza Need At Least 2 Or At Most 5 Toppings", new[] { "SelectedToppings" }));
             }
 
             return result;

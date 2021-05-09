@@ -41,7 +41,7 @@ namespace PizzaBox.Client.Controllers
 
                 return View(pizza);
             }
-            else 
+            else
             {
                 order.Load(_unitofwork);
                 return View("../home/index", order);

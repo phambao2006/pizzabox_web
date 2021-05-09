@@ -1,14 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PizzaBox.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PizzaBox.Storing
 {
-   public class PizzaBoxContext : DbContext
+    public class PizzaBoxContext : DbContext
     {
         public DbSet<Pizza> Pizzas { get; set; }
         public DbSet<Order> Orders { get; set; }
@@ -16,10 +11,10 @@ namespace PizzaBox.Storing
         public DbSet<Size> Sizes { get; set; }
         public DbSet<Topping> Toppings { get; set; }
 
-        public PizzaBoxContext(DbContextOptions options) : base(options){}
+        public PizzaBoxContext(DbContextOptions options) : base(options) { }
 
 
-        protected override void OnModelCreating(ModelBuilder builder) 
+        protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Pizza>().HasKey(e => e.EntityID);
 
@@ -30,7 +25,7 @@ namespace PizzaBox.Storing
             builder.Entity<Topping>().HasKey(e => e.EntityID);
 
             builder.Entity<Size>().HasKey(e => e.EntityID);
-            
+
             //relationship
             builder.Entity<Pizza>().HasOne(p => p.Crust).WithMany(c => c.Pizzas).HasForeignKey(p => p.CrustEntityId);
             builder.Entity<Pizza>().HasOne(p => p.Size).WithMany(s => s.Pizzas).HasForeignKey(p => p.SizeEntityId);
@@ -39,7 +34,7 @@ namespace PizzaBox.Storing
             OnModelSeeding(builder);
         }
 
-        private static  void OnModelSeeding(ModelBuilder builder)
+        private static void OnModelSeeding(ModelBuilder builder)
         {
             builder.Entity<Crust>().HasData(new[]
             {
