@@ -36,6 +36,8 @@ namespace PizzaBox.Client.Controllers
                 }
                 var pizza = new Pizza { Crust = crust, Size = size, Toppings = toppings };
 
+                pizza.GetPrice();
+
                 var neworder = new Order();
 
                 if (_accessor.HttpContext.Session.GetString("order") == null)
@@ -56,6 +58,8 @@ namespace PizzaBox.Client.Controllers
                     neworder = JsonConvert.DeserializeObject<Order>(orderjson);
 
                     neworder.Pizzas.Add(pizza);
+
+                    _accessor.HttpContext.Session.SetString("order", JsonConvert.SerializeObject(neworder));
                 }
                 
 

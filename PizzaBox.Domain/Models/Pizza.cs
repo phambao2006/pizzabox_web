@@ -13,7 +13,7 @@ namespace PizzaBox.Domain.Models
         public long SizeEntityId { get; set; }
         public long CrustEntityId { get; set; }
 
-        public decimal PizzaPrice()
+        public void GetPrice()
         {
             decimal pizzaprice = 4;
             foreach (var topping in Toppings)
@@ -23,7 +23,7 @@ namespace PizzaBox.Domain.Models
 
             pizzaprice = pizzaprice + Crust.Price + Size.Price;
 
-            return decimal.Round(pizzaprice, 2);
+            Price = decimal.Round(pizzaprice, 2);
         }
     }
 }

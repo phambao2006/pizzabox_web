@@ -17,29 +17,39 @@
             <!-- Brand -->
             <a class="navbar-brand" href="/home">PizzaBox</a>
 
-            <!-- Links -->
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Customer
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Order Pizza</a>
-                        <a class="dropdown-item" href="#">View Order History</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Store</a>
-                </li>
-                <li class="nav-item">
 
-            </ul>
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Customer
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Order Pizza</a>
+                            <a class="dropdown-item" href="#">View Order History</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Store</a>
+                    </li>
+                    <li class="nav-item">
+
+                </ul>
+            </div>
+            
         </nav>
+
         <img class="img-fluid" src="~/img/pizzabanner.jpg" />
+
+
     </header>
     <main role="main" class="margin">
-
         @RenderBody()
     </main>
 

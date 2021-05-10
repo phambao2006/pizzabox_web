@@ -41,7 +41,6 @@ namespace PizzaBox.Client.Models
             {
                 result.Add(new ValidationResult("Pizza Need At Least 2 Or At Most 5 Toppings", new[] { "SelectedToppings" }));
             }
-
             return result;
         }
     }

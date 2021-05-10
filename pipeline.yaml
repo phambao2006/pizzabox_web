@@ -4,5 +4,9 @@ jobs:
 		steps:
 			- uses: actions/checkout@v2
 			- run: dotnet build
+	test:
+	run-on: ubuntu-20.04
+		- uses: actions/checkout@v2
+		- run: dotnet test -p:CollectCoverage=true -p:CoverletOutputFormat=opencover
 name: ci-pipeline
 on: push
