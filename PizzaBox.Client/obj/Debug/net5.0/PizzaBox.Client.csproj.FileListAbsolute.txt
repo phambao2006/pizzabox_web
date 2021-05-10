@@ -106,3 +106,11 @@ C:\Users\Bao\revature\pizzabox_web\PizzaBox.Client\obj\Debug\net5.0\PizzaBox.Cli
 C:\Users\Bao\revature\pizzabox_web\PizzaBox.Client\obj\Debug\net5.0\PizzaBox.Client.Views.pdb
 C:\Users\Bao\revature\pizzabox_web\PizzaBox.Client\obj\Debug\net5.0\PizzaBox.Client.csproj.CopyComplete
 C:\Users\Bao\revature\pizzabox_web\PizzaBox.Client\obj\Debug\net5.0\PizzaBox.Client.genruntimeconfig.cache
+C:\Users\Bao\revature\pizzabox_web\PizzaBox.Client\bin\Debug\net5.0\System.Web.Mvc.dll
+C:\Users\Bao\revature\pizzabox_web\PizzaBox.Client\bin\Debug\net5.0\System.Web.Razor.dll
+C:\Users\Bao\revature\pizzabox_web\PizzaBox.Client\bin\Debug\net5.0\System.Web.Helpers.dll
+C:\Users\Bao\revature\pizzabox_web\PizzaBox.Client\bin\Debug\net5.0\System.Web.WebPages.Deployment.dll
+C:\Users\Bao\revature\pizzabox_web\PizzaBox.Client\bin\Debug\net5.0\System.Web.WebPages.Razor.dll
+C:\Users\Bao\revature\pizzabox_web\PizzaBox.Client\bin\Debug\net5.0\System.Web.WebPages.dll
+C:\Users\Bao\revature\pizzabox_web\PizzaBox.Client\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
+C:\Users\Bao\revature\pizzabox_web\PizzaBox.Client\bin\Debug\net5.0\Newtonsoft.Json.dll

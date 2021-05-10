@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using PizzaBox.Client.Models;
 using PizzaBox.Domain.Models;
 using PizzaBox.Storing;
@@ -8,17 +10,19 @@ using System.Linq;
 
 namespace PizzaBox.Client.Controllers
 {
-    public class OrderController : Controller
+    public class OrderController : Microsoft.AspNetCore.Mvc.Controller
     {
         private readonly UnitofWork _unitofwork;
         private readonly PizzaBoxContext _context;
-        public OrderController(UnitofWork unitofwork, PizzaBoxContext context)
+        private readonly IHttpContextAccessor _accessor;
+        public OrderController(UnitofWork unitofwork, PizzaBoxContext context, IHttpContextAccessor accessor)
         {
             _unitofwork = unitofwork;
             _context = context;
+            _accessor = accessor;
         }
 
-        [ValidateAntiForgeryToken]
+        [Microsoft.AspNetCore.Mvc.ValidateAntiForgeryToken]
         public IActionResult Order(OrderMVC order)
         {
             if (ModelState.IsValid)
@@ -34,16 +38,34 @@ namespace PizzaBox.Client.Controllers
 
                 var neworder = new Order();
 
-                neworder.Customer = new Customer { Name = order.CustomerName };
+                if (_accessor.HttpContext.Session.GetString("order") == null)
+                {
+                   
+                    neworder.Customer = new Customer { Name = order.CustomerName };
 
-                neworder.Store = _unitofwork.Stores.Select(s => s.Name == order.SelectedStore).FirstOrDefault();
+                    neworder.Store = _unitofwork.Stores.Select(s => s.Name == order.SelectedStore).FirstOrDefault();
 
-                neworder.Pizzas.Add(pizza);
+                    neworder.Pizzas.Add(pizza);
 
-                _context.Orders.Add(neworder);
-                _context.SaveChanges();
+                    _accessor.HttpContext.Session.SetString("order", JsonConvert.SerializeObject(neworder));
+                }
+                else 
+                {
+                    var orderjson = _accessor.HttpContext.Session.GetString("order");
 
-                return View(pizza);
+                    neworder = JsonConvert.DeserializeObject<Order>(orderjson);
+
+                    neworder.Pizzas.Add(pizza);
+                }
+                
+
+
+
+
+              //  _context.Orders.Add(neworder);
+               // _context.SaveChanges();
+
+              return View(neworder);
             }
             else
             {

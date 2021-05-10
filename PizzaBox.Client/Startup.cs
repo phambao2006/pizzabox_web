@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PizzaBox.Storing;
 using PizzaBox.Storing.UnitofWork;
+using System;
 
 namespace PizzaBox.Client
 {
@@ -22,10 +23,19 @@ namespace PizzaBox.Client
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddHttpContextAccessor();
             services.AddScoped<UnitofWork>();
             services.AddDbContext<PizzaBoxContext>(options =>
             {
                 options.UseNpgsql(Configuration.GetConnectionString("postgres"));
+            });
+            services.AddDistributedMemoryCache();
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(5);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
             });
         }
 
@@ -48,6 +58,8 @@ namespace PizzaBox.Client
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

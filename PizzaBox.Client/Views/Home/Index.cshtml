@@ -16,12 +16,12 @@
             <div class="row">
                 <div class="col-12 col-sm-6 col-md-3 row box">
                     <div class="col-6 box">
-                        <label for="CustomerName">Name:</label>
+                        <h3>Name</h3>
                         <input type="text" class="form-control" id="CustomerName" asp-for="CustomerName" placeholder="Name">
                         @Html.ValidationMessageFor(m => m.CustomerName, null, new { @class = "text-danger" })
                     </div>
                     <div class="col-6 box">
-                        <h1>Store</h1>
+                        <h3>Store</h3>
 
                         @foreach (var item in Model.Stores)
                         {
@@ -39,7 +39,7 @@
                         <img src="https://via.placeholder.com/100" />
                     </div>
                     <div class=" col-md-6 box">
-                        <h1>Crust</h1>
+                        <h3>Crust</h3>
 
                         @foreach (var item in Model.Crusts)
                         {
@@ -58,7 +58,7 @@
                         <img src="https://via.placeholder.com/100" />
                     </div>
                     <div class=" col-md-6 box">
-                        <h1>Size</h1>
+                        <h3>Size</h3>
 
                         @foreach (var item in Model.Sizes)
                         {
@@ -77,7 +77,7 @@
                         <img src="https://via.placeholder.com/100" />
                     </div>
                     <div class=" col-md-6 box">
-                        <h1>Topping</h1>
+                        <h3>Topping</h3>
 
                         @foreach (var item in Model.Toppings)
                         {

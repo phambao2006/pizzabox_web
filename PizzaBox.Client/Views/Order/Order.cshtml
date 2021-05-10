@@ -1,9 +1,14 @@
-﻿@model PizzaBox.Domain.Models.Pizza
+﻿@model PizzaBox.Domain.Models.Order
 <body>
-    @Model.Crust.Name
-    @Model.Size.Name
-    @foreach (var topping in Model.Toppings) 
+    @foreach (var pizza in Model.Pizzas)
     {
-        @topping.Name
+        @pizza.Crust.Name
+        @pizza.Size.Name
+
+        @foreach (var topping in pizza.Toppings)
+        {
+            @topping.Name
+        }
     }
+    <a href="../home/index">OrderMore</a>
 </body>
