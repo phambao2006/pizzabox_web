@@ -1,18 +1,4 @@
-jobs:
-  build:
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v2
-      - run: dotnet build
-
-  test:
-    needs:
-      - build
-    runs-on: ubuntu-20.04
-    steps:
-     - uses: actions/checkout@v2
-     - run: dotnet test -p:CollectCoverage=true -p:CoverletOutputFormat=opencover --logger=trx
-
+jobs: 
   analyze:
     needs:
         - build
