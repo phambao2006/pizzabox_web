@@ -1,11 +1,11 @@
-jobs: 
-	build:
-		run-on: ubuntu-20.04
-		steps:
-			- uses: actions/checkout@v2
-			- run: dotnet build
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: dotnet build
 
-	test:
+  test:
     needs:
       - build
 	  run-on: ubuntu-20.04
