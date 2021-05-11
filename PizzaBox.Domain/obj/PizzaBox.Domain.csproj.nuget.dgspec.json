@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Domain/PizzaBox.Domain.csproj": {}
+    "C:\\Users\\Bao\\revature\\pizzabox_web\\PizzaBox.Domain\\PizzaBox.Domain.csproj": {}
   },
   "projects": {
-    "/mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Domain/PizzaBox.Domain.csproj": {
+    "C:\\Users\\Bao\\revature\\pizzabox_web\\PizzaBox.Domain\\PizzaBox.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Domain/PizzaBox.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Bao\\revature\\pizzabox_web\\PizzaBox.Domain\\PizzaBox.Domain.csproj",
         "projectName": "PizzaBox.Domain",
-        "projectPath": "/mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Domain/PizzaBox.Domain.csproj",
-        "packagesPath": "/home/phambao/.nuget/packages/",
-        "outputPath": "/mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Domain/obj/",
+        "projectPath": "C:\\Users\\Bao\\revature\\pizzabox_web\\PizzaBox.Domain\\PizzaBox.Domain.csproj",
+        "packagesPath": "C:\\Users\\Bao\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bao\\revature\\pizzabox_web\\PizzaBox.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/phambao/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Bao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -58,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

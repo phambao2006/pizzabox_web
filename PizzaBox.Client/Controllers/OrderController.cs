@@ -10,7 +10,7 @@ using System.Linq;
 
 namespace PizzaBox.Client.Controllers
 {
-    public class OrderController : Microsoft.AspNetCore.Mvc.Controller
+    public class OrderController : Controller
     {
         private readonly UnitofWork _unitofwork;
         private readonly PizzaBoxContext _context;
@@ -22,7 +22,8 @@ namespace PizzaBox.Client.Controllers
             _accessor = accessor;
         }
 
-        [Microsoft.AspNetCore.Mvc.ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken]
+        [HttpPost]
         public IActionResult Order(OrderMVC order)
         {
             if (ModelState.IsValid)
@@ -46,10 +47,7 @@ namespace PizzaBox.Client.Controllers
                     neworder.Customer = new Customer { Name = order.CustomerName };
 
                     neworder.Store = _unitofwork.Stores.Select(s => s.Name == order.SelectedStore).FirstOrDefault();
-
-                    neworder.Pizzas.Add(pizza);
-
-                    _accessor.HttpContext.Session.SetString("order", JsonConvert.SerializeObject(neworder));
+                 
                 }
                 else 
                 {
@@ -57,25 +55,31 @@ namespace PizzaBox.Client.Controllers
 
                     neworder = JsonConvert.DeserializeObject<Order>(orderjson);
 
-                    neworder.Pizzas.Add(pizza);
-
-                    _accessor.HttpContext.Session.SetString("order", JsonConvert.SerializeObject(neworder));
                 }
-                
+
+                neworder.Pizzas.Add(pizza);
+
+                _accessor.HttpContext.Session.SetString("order", JsonConvert.SerializeObject(neworder));
 
 
-
-
-              //  _context.Orders.Add(neworder);
-               // _context.SaveChanges();
-
-              return View(neworder);
+                return View(neworder);
             }
             else
             {
                 order.Load(_unitofwork);
                 return View("../home/index", order);
             }
+        }
+        [ValidateAntiForgeryToken]
+        [HttpGet]
+        public IActionResult ThankYou() 
+        {
+           //var orderjson = _accessor.HttpContext.Session.GetString("order");
+           //var neworder = JsonConvert.DeserializeObject<Order>(orderjson);
+
+          //_context.Orders.Add(neworder);
+          //_context.SaveChanges();
+            return View("ThankYou");
         }
     }
 }

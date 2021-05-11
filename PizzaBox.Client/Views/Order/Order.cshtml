@@ -16,24 +16,32 @@
             @{int index = 1;}
             @foreach (var pizza in Model.Pizzas)
             {
-            <tr>
-                <th scope="row">@index</th>
-                <td>@pizza.Size.Name</td>
-                <td>@pizza.Crust.Name</td>
-                <td>
-                    @foreach (var topping in pizza.Toppings)
-                    {
-                    @topping.Name @Html.Raw(" ")
-                    }
-                    
-                </td>
-                <td>
-                    @pizza.Price
-                </td>
-                @{index++;}
-            </tr>
+                <tr>
+                    <th scope="row">@index</th>
+                    <td>@pizza.Size.Name</td>
+                    <td>@pizza.Crust.Name</td>
+                    <td>
+                        @foreach (var topping in pizza.Toppings)
+                        {
+                            @topping.Name @Html.Raw(" ")
+
+                        }
+                    </td>
+                    <td>
+                        @pizza.Price
+                    </td>
+                    @{index++;}
+                </tr>
             }
-            </tbody>
+        </tbody>
     </table>
-    <a href="../home/index">Order More</a>
+        <div class="container">
+        <a href="../home/index">Order More</a>
+        </div>
+        <form action="/order" method="get">
+            @Html.AntiForgeryToken()
+            <div class="container">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
 </body>

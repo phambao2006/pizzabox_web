@@ -122,3 +122,4 @@ C:\Users\Bao\revature\pizzabox_web\PizzaBox.Client\obj\Debug\net5.0\PizzaBox.Cli
 C:\Users\Bao\revature\pizzabox_web\PizzaBox.Client\obj\Debug\net5.0\ref\PizzaBox.Client.dll
 C:\Users\Bao\revature\pizzabox_web\PizzaBox.Client\obj\Debug\net5.0\PizzaBox.Client.pdb
 C:\Users\Bao\revature\pizzabox_web\PizzaBox.Client\obj\Debug\net5.0\PizzaBox.Client.genruntimeconfig.cache
+C:\Users\Bao\revature\pizzabox_web\PizzaBox.Client\obj\Debug\net5.0\Razor\Views\Order\ThankYou.cshtml.g.cs
