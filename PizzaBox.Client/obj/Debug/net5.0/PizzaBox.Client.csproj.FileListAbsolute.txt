@@ -61,8 +61,10 @@
 /mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Client/bin/Debug/net5.0/Microsoft.Web.Infrastructure.dll
 /mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Client/bin/Debug/net5.0/Newtonsoft.Json.dll
 /mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/Razor/Views/Order/ThankYou.cshtml.g.cs
+/mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/Razor/Views/Customer/Customer.cshtml.g.cs
 C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/bin/Debug/net5.0/appsettings.Development.json
 C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/bin/Debug/net5.0/appsettings.json
+C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/bin/Debug/net5.0/libman.json
 C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/bin/Debug/net5.0/PizzaBox.Client.exe
 C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/bin/Debug/net5.0/PizzaBox.Client.deps.json
 C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/bin/Debug/net5.0/PizzaBox.Client.runtimeconfig.json
@@ -93,6 +95,7 @@ C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/bin/Debug/net5.0/PizzaBox.Dom
 C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/bin/Debug/net5.0/PizzaBox.Storing.dll
 C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/bin/Debug/net5.0/PizzaBox.Domain.pdb
 C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/bin/Debug/net5.0/PizzaBox.Storing.pdb
+C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/PizzaBox.Client.csprojAssemblyReference.cache
 C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/PizzaBox.Client.GeneratedMSBuildEditorConfig.editorconfig
 C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/PizzaBox.Client.AssemblyInfoInputs.cache
 C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/PizzaBox.Client.AssemblyInfo.cs
@@ -106,6 +109,7 @@ C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/scopedcss/bu
 C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/PizzaBox.Client.TagHelpers.input.cache
 C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/PizzaBox.Client.TagHelpers.output.cache
 C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/PizzaBox.Client.RazorCoreGenerate.cache
+C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/Razor/Views/Customer/Customer.cshtml.g.cs
 C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/Razor/Views/Home/Index.cshtml.g.cs
 C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/Razor/Views/Home/Privacy.cshtml.g.cs
 C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/Razor/Views/Order/Order.cshtml.g.cs
@@ -123,6 +127,4 @@ C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/PizzaBox.Cli
 C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/ref/PizzaBox.Client.dll
 C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/PizzaBox.Client.pdb
 C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/PizzaBox.Client.genruntimeconfig.cache
-C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/PizzaBox.Client.csprojAssemblyReference.cache
-C:/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/Razor/Views/Customer/Customer.cshtml.g.cs
-/mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Client/obj/Debug/net5.0/Razor/Views/Customer/Customer.cshtml.g.cs
+/mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Client/bin/Debug/net5.0/libman.json

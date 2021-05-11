@@ -69,7 +69,7 @@ namespace PizzaBox.Client.Controllers
                 _accessor.HttpContext.Session.SetString("order", JsonConvert.SerializeObject(neworder));
 
 
-                return RedirectToAction("GetOrder", neworder);
+                return RedirectToAction("GetOrder");
             }
             else
             {
@@ -81,20 +81,18 @@ namespace PizzaBox.Client.Controllers
         public IActionResult ThankYou()
         {
             var orderjson = _accessor.HttpContext.Session.GetString("order");
-            var neworder = JsonConvert.DeserializeObject<Order>(orderjson);
 
-
-            _context.Attach(neworder);
-
-            _context.SaveChangesAsync();
+           var neworder = JsonConvert.DeserializeObject<Order>(orderjson);
+            _unitofwork.Orders.Insert(neworder);
+            _unitofwork.Save();
             _accessor.HttpContext.Session.Remove("order");
-            return View();
+           return View();
         }
 
-        public IActionResult GetOrder(Order neworder)
+        public IActionResult GetOrder()
         {
             var orderjson = _accessor.HttpContext.Session.GetString("order");
-            neworder = JsonConvert.DeserializeObject<Order>(orderjson);
+            var neworder = JsonConvert.DeserializeObject<Order>(orderjson);
             return View("Order", neworder);
         }
     }

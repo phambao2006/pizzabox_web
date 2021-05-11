@@ -21,7 +21,8 @@ namespace PizzaBox.Storing.Repositories
 
         public bool Insert(Order entry)
         {
-            throw new NotImplementedException();
+            _context.Orders.Add(entry);
+            return true;
         }
 
         public IEnumerable<Order> Select(Func<Order, bool> filter)

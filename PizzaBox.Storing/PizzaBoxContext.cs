@@ -14,6 +14,7 @@ namespace PizzaBox.Storing
         public DbSet<Size> Sizes { get; set; }
         public DbSet<Topping> Toppings { get; set; }
 
+        public PizzaBoxContext() { }
         public PizzaBoxContext(DbContextOptions options) : base(options) { }
 
 
