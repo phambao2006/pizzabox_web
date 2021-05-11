@@ -35,13 +35,13 @@
             }
         </tbody>
     </table>
-        <div class="container">
-        <a href="../home/index">Order More</a>
+        <div>
+        <a class="btn btn-primary" href="../home/index">Order More Pizza</a>
         </div>
         <form action="/order" method="get">
             @Html.AntiForgeryToken()
-            <div class="container">
-                <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="center">
+                <button type="submit" class="btn btn-primary btn-lg">Confirm</button>
             </div>
         </form>
 </body>

@@ -2,7 +2,10 @@
 {
     margin: 30px;
 }
-
+.smallmagin-bot 
+{
+    margin-bottom:5px;
+}
 .box 
 {
     padding-right: 3px !important;
@@ -12,6 +15,6 @@
     height:20%;
 }
 .center {
-    margin-left: 40%;
-    margin-right: 60%;
+    margin-left: 50%;
+    margin-right: 50%;
 }

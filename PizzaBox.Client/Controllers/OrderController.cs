@@ -43,13 +43,13 @@ namespace PizzaBox.Client.Controllers
 
                 if (_accessor.HttpContext.Session.GetString("order") == null)
                 {
-                   
+
                     neworder.Customer = new Customer { Name = order.CustomerName };
 
                     neworder.Store = _unitofwork.Stores.Select(s => s.Name == order.SelectedStore).FirstOrDefault();
-                 
+
                 }
-                else 
+                else
                 {
                     var orderjson = _accessor.HttpContext.Session.GetString("order");
 
@@ -70,16 +70,16 @@ namespace PizzaBox.Client.Controllers
                 return View("../home/index", order);
             }
         }
-        [ValidateAntiForgeryToken]
         [HttpGet]
-        public IActionResult ThankYou() 
+        public IActionResult ThankYou()
         {
-           //var orderjson = _accessor.HttpContext.Session.GetString("order");
-           //var neworder = JsonConvert.DeserializeObject<Order>(orderjson);
+            var orderjson = _accessor.HttpContext.Session.GetString("order");
+            var neworder = JsonConvert.DeserializeObject<Order>(orderjson);
 
-          //_context.Orders.Add(neworder);
-          //_context.SaveChanges();
-            return View("ThankYou");
+            _context.Orders.Attach(neworder);
+            _context.SaveChanges();
+            _accessor.HttpContext.Session.Remove("order")
+            return View();
         }
     }
 }

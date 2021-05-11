@@ -14,13 +14,13 @@
         @Html.AntiForgeryToken()
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-6 col-md-3 row box">
-                    <div class="col-6 box">
+                <div class="col-12 col-sm-6 col-md-2 row">
+                    <div class="col-12 smallmagin-bot ">
                         <h3>Name</h3>
                         <input type="text" class="form-control" id="CustomerName" asp-for="CustomerName" placeholder="Name">
                         @Html.ValidationMessageFor(m => m.CustomerName, null, new { @class = "text-danger" })
                     </div>
-                    <div class="col-6 box">
+                    <div class="col-12 ">
                         <h3>Store</h3>
 
                         @foreach (var item in Model.Stores)
@@ -34,11 +34,11 @@
                         @Html.ValidationMessageFor(m => m.SelectedStore, null, new { @class = "text-danger" })
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-3 row box">
-                    <div class=" col-md-6 box">
+                <div class="col-12 col-sm-6 col-md-3 row ">
+                    <div class=" col-md-6 ">
                         <img src="https://via.placeholder.com/100" />
                     </div>
-                    <div class=" col-md-6 box">
+                    <div class=" col-md-6 ">
                         <h3>Crust</h3>
 
                         @foreach (var item in Model.Crusts)
@@ -53,11 +53,11 @@
 
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-3  row box">
-                    <div class=" col-md-6 box">
+                <div class="col-12 col-sm-6 col-md-3  row ">
+                    <div class=" col-md-6 ">
                         <img src="https://via.placeholder.com/100" />
                     </div>
-                    <div class=" col-md-6 box">
+                    <div class=" col-md-6 ">
                         <h3>Size</h3>
 
                         @foreach (var item in Model.Sizes)
@@ -72,11 +72,11 @@
 
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-3 row box">
+                <div class="col-12 col-sm-6 col-md-4 row ">
                     <div class=" col-md-6 box">
                         <img src="https://via.placeholder.com/100" />
                     </div>
-                    <div class=" col-md-6 box">
+                    <div class=" col-md-6 ">
                         <h3>Topping</h3>
 
                         @foreach (var item in Model.Toppings)
