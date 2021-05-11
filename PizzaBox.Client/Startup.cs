@@ -72,6 +72,12 @@ namespace PizzaBox.Client
                 endpoints.MapControllerRoute(
                     name: "thankyou",
                     pattern: "{controller=Order}/{action=thankyou}/");
+                endpoints.MapControllerRoute(
+                    name: "customer",
+                    pattern: "{controller=Customer}/{action=Customer}");
+                endpoints.MapControllerRoute(
+                    name: "customer",
+                    pattern: "{controller=Customer}/{action=GetCustomer}/{id?}");
 
             });
         }

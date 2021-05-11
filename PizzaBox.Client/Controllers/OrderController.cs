@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using PizzaBox.Client.Models;
 using PizzaBox.Domain.Models;
@@ -43,8 +44,15 @@ namespace PizzaBox.Client.Controllers
 
                 if (_accessor.HttpContext.Session.GetString("order") == null)
                 {
-
-                    neworder.Customer = new Customer { Name = order.CustomerName };
+                    var tempcustomer = _context.Customers.FirstOrDefault(c => c.Name == order.CustomerName);
+                    if (tempcustomer != null)
+                    {
+                        neworder.Customer = tempcustomer;
+                    }
+                    else
+                    {
+                        neworder.Customer = new Customer { Name = order.CustomerName };
+                    }
 
                     neworder.Store = _unitofwork.Stores.Select(s => s.Name == order.SelectedStore).FirstOrDefault();
 
@@ -54,7 +62,6 @@ namespace PizzaBox.Client.Controllers
                     var orderjson = _accessor.HttpContext.Session.GetString("order");
 
                     neworder = JsonConvert.DeserializeObject<Order>(orderjson);
-
                 }
 
                 neworder.Pizzas.Add(pizza);
@@ -62,7 +69,7 @@ namespace PizzaBox.Client.Controllers
                 _accessor.HttpContext.Session.SetString("order", JsonConvert.SerializeObject(neworder));
 
 
-                return View(neworder);
+                return RedirectToAction("GetOrder", neworder);
             }
             else
             {
@@ -76,10 +83,19 @@ namespace PizzaBox.Client.Controllers
             var orderjson = _accessor.HttpContext.Session.GetString("order");
             var neworder = JsonConvert.DeserializeObject<Order>(orderjson);
 
-            _context.Orders.Attach(neworder);
-            _context.SaveChanges();
-            _accessor.HttpContext.Session.Remove("order")
+
+            _context.Attach(neworder);
+
+            _context.SaveChangesAsync();
+            _accessor.HttpContext.Session.Remove("order");
             return View();
+        }
+
+        public IActionResult GetOrder(Order neworder)
+        {
+            var orderjson = _accessor.HttpContext.Session.GetString("order");
+            neworder = JsonConvert.DeserializeObject<Order>(orderjson);
+            return View("Order", neworder);
         }
     }
 }

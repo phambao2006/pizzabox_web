@@ -1,0 +1,32 @@
+﻿@model PizzaBox.Domain.Models.Customer
+
+<body>
+    <form action="/Customer" method="post">
+        <div>
+            <input type="text" class="form-control" id="CustomerName" asp-for="Name" placeholder="Name">
+            @Html.ValidationMessageFor(m => m.Name, null, new { @class = "text-danger" })
+        </div>
+    </form>
+    <div class="container">
+       @if(Model != null) 
+       {
+           foreach (var order in Model.Orders)
+        {
+            @order.Store
+            foreach (var pizza in order.Pizzas)
+            {
+                   @pizza.Size
+                   @pizza.Crust
+
+                foreach (var topping in pizza.Toppings)
+                {
+                    @topping.Name
+                }
+            }
+
+            @order.Price
+            @order.Date
+        }
+       }
+    </div>
+</body>
