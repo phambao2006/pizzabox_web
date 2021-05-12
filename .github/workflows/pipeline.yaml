@@ -38,7 +38,7 @@ jobs:
       - run: docker image build -f Dockerfile -t pizzabox .
       - run: docker image tag pizzabox phambao2006/pizzabox
       - run: echo $DOCKER_TOKEN | docker login -u $DOCKER_USER --password-stdin
-      - run: docker push fredbelotte/pizzabox
+      - run: docker push phambao2006/pizzabox
       - run: docker logout
 
   deploy:
