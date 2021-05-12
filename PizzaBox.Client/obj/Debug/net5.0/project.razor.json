@@ -15629,6 +15629,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Client/Views/Customer/Customer.cshtml",
+      "TargetPath": "Views\\Customer\\Customer.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/mnt/c/Users/Bao/revature/pizzabox_web/PizzaBox.Client/Views/Shared/_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"

@@ -3,8 +3,14 @@ using System.Collections.Generic;
 
 namespace PizzaBox.Domain.Models
 {
-    public class Topping : AComponent
+  public class Topping : AComponent
+  {
+    public ICollection<Pizza> Pizzas { get; set; }
+
+    public override string ToString()
     {
-        public ICollection<Pizza> Pizzas { get; set; }
+      return Name;
     }
+  }
+
 }

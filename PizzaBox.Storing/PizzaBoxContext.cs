@@ -48,15 +48,18 @@ namespace PizzaBox.Storing
     {
       builder.Entity<Crust>().HasData(new[]
       {
-                new Crust {EntityID =1,Name="Original",Price = 2},
+                new Crust {EntityID=1,Name="Original",Price = 2},
                 new Crust {EntityID=2,Name="Thin Crust",Price = 2},
-                new Crust {EntityID=3,Name="Stuffed Crust",Price = 2}
+                new Crust {EntityID=3,Name="Stuffed Crust",Price = 2},
+                new Crust {EntityID=4,Name="Hand Toast",Price = 2},
+                new Crust {EntityID=5,Name="Cheese Crust",Price = 2}
             });
       builder.Entity<Size>().HasData(new[]
 {
                 new Size {EntityID=1,Name="Small",Price = 2},
                 new Size {EntityID=2,Name="Medium",Price = 3},
-                new Size {EntityID=3,Name="Large",Price = 4}
+                new Size {EntityID=3,Name="Large",Price = 4},
+                new Size {EntityID=4,Name="X-Large",Price = 5}
             });
 
       builder.Entity<Topping>().HasData(new[]
@@ -66,7 +69,9 @@ namespace PizzaBox.Storing
                 new Topping {EntityID=3,Name="Pork",Price = 2},
                 new Topping {EntityID=4,Name="Pineapple",Price = 2},
                 new Topping {EntityID=5,Name="Bell Pepper",Price = 2},
-                new Topping {EntityID=6,Name="Mushroom",Price = 2}
+                new Topping {EntityID=6,Name="Pepperoni",Price = 2},
+                new Topping {EntityID=7,Name="Sausage",Price = 2},
+                new Topping {EntityID=8,Name="Mushroom",Price = 2},
             });
       builder.Entity<Store>().HasData(new[]
       {

@@ -8,25 +8,25 @@
         </div>
     </form>
     <div class="container">
-       @if(Model != null) 
-       {
-           foreach (var order in Model.Orders)
+        @if (Model != null)
         {
-            @order.Store
-            foreach (var pizza in order.Pizzas)
+            foreach (var order in Model.Orders)
             {
-                   @pizza.Size
-                   @pizza.Crust
-
-                foreach (var topping in pizza.Toppings)
+                <div>@order.Store</div>
+                foreach (var pizza in order.Pizzas)
                 {
-                    @topping.Name
-                }
-            }
+                    <div>@pizza.Size</div>
+                    <div>@pizza.Crust</div>
 
-            @order.Price
-            @order.Date
+                    foreach (var topping in pizza.Toppings)
+                    {
+                        @topping.Name
+                    }
+                }
+
+                <div>@order.Price</div>
+                <div> @order.Date</div>
+            }
         }
-       }
     </div>
 </body>
