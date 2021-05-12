@@ -14,9 +14,15 @@ namespace PizzaBox.Storing
         public DbSet<Size> Sizes { get; set; }
         public DbSet<Topping> Toppings { get; set; }
 
-        public PizzaBoxContext() { }
+        public PizzaBoxContext() 
+        {
+        }
         public PizzaBoxContext(DbContextOptions options) : base(options) { }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseNpgsql();
+        }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

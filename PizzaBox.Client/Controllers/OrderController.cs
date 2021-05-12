@@ -6,6 +6,7 @@ using PizzaBox.Client.Models;
 using PizzaBox.Domain.Models;
 using PizzaBox.Storing;
 using PizzaBox.Storing.UnitofWork;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -66,8 +67,8 @@ namespace PizzaBox.Client.Controllers
 
                 neworder.Pizzas.Add(pizza);
 
+                JsonConvert.SerializeObject(neworder);
                 _accessor.HttpContext.Session.SetString("order", JsonConvert.SerializeObject(neworder));
-
 
                 return RedirectToAction("GetOrder");
             }
@@ -80,11 +81,39 @@ namespace PizzaBox.Client.Controllers
         [HttpGet]
         public IActionResult ThankYou()
         {
-            var orderjson = _accessor.HttpContext.Session.GetString("order");
+           var orderjson = _accessor.HttpContext.Session.GetString("order");
 
            var neworder = JsonConvert.DeserializeObject<Order>(orderjson);
-            _unitofwork.Orders.Insert(neworder);
-            _unitofwork.Save();
+
+
+            /*  foreach (var pizza in neworder.Pizzas)
+              {
+                  _context.ChangeTracker.TrackGraph(
+                      neworder, node =>
+                      {
+                          var keyValue = node.Entry.Property("EntityID").CurrentValue;
+                          var entityType = node.Entry.Metadata;
+
+                          var existingEntity = node.Entry.Context.ChangeTracker.Entries()
+                              .FirstOrDefault(
+                                  e => Equals(e.Metadata, entityType)
+                                       && Equals(e.Property("EntityID").CurrentValue, keyValue));
+
+                          if (existingEntity == null)
+                          {
+                              Console.WriteLine($"Tracking {entityType.DisplayName()} entity with key value {keyValue}");
+
+                              node.Entry.State = EntityState.Modified;
+                          }
+                          else
+                          {
+                              Console.WriteLine($"Discarding duplicate {entityType.DisplayName()} entity with key value {keyValue}");
+                          }
+                      });
+              }*/
+            _context.Attach(neworder);
+
+            _context.SaveChanges();
             _accessor.HttpContext.Session.Remove("order");
            return View();
         }

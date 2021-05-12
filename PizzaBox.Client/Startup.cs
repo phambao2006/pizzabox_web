@@ -24,11 +24,14 @@ namespace PizzaBox.Client
         {
             services.AddControllersWithViews();
             services.AddHttpContextAccessor();
+
             services.AddScoped<UnitofWork>();
+
             services.AddDbContext<PizzaBoxContext>(options =>
             {
                 options.UseNpgsql(Configuration.GetConnectionString("postgres"));
             });
+
             services.AddDistributedMemoryCache();
 
             services.AddSession(options =>
