@@ -29,7 +29,7 @@ namespace PizzaBox.Client
 
             services.AddDbContext<PizzaBoxContext>(options =>
             {
-                options.UseNpgsql(Configuration.GetConnectionString("postgres"));
+                options.UseSqlServer(Configuration.GetConnectionString("mssql"));
             });
 
             services.AddDistributedMemoryCache();
